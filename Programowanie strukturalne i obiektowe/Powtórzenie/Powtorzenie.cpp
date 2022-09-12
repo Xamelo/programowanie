@@ -15,11 +15,32 @@ int chooseOptionsFromUser()
 
 	cout << "Wybierz opcje\n";
 	cin >> selectedOption;
+	return selectedOption;
 }
 
+void squareArea()
+{
+	float area, side;
 
+	cout << "Podaj bok kwadratu: ";
+	cin >> side;
+	area = side * side;
+	cout << "Pole wynosi: " << area;
+}
 
-void doSelctedTask()
+void triangleArea()
+{
+	float side, height, area;
+
+	cout << "Podaj bok trojkata: ";
+	cin >> side;
+	cout << "Podaj wysokosc trojkata: ";
+	cin >> height;
+	area = side * height / 2;
+	cout << "Pole trojkata wynosi: " << area;
+}
+
+void doSelctedTask(int selectedOption)
 {
 	if (selectedOption == 1)
 	{
@@ -37,13 +58,12 @@ void mainProgram()
 	//1. wyświetlenie menu
 	showMenu();
 	//2. wybranie opcji przez użytkownika
-	chooseOptionsFromUser();
+	int selected = chooseOptionsFromUser();
 	//3. wykonanie wybranego zadania
-	doSelctedTask();
+	doSelctedTask(selected);
 }
 
 void main()
 {
 	mainProgram();
-
 }
