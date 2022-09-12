@@ -20,6 +20,7 @@ int chooseOptionsFromUser()
 
 void squareArea()
 {
+	system("cls");
 	float area, side;
 
 	cout << "Podaj bok kwadratu: ";
@@ -30,6 +31,7 @@ void squareArea()
 
 void triangleArea()
 {
+	system("cls");
 	float side, height, area;
 
 	cout << "Podaj bok trojkata: ";
@@ -42,7 +44,21 @@ void triangleArea()
 
 void doSelctedTask(int selectedOption)
 {
-	if (selectedOption == 1)
+	switch (selectedOption)
+	{
+	case 1:
+		squareArea();
+		break;
+	case 2:
+		triangleArea();
+		break;
+	default:
+		cout << "Brak opcji w menu";
+		break;
+	}
+
+
+	/* if (selectedOption == 1)
 	{
 		squareArea();
 	}
@@ -50,7 +66,7 @@ void doSelctedTask(int selectedOption)
 	if (selectedOption == 2)
 	{
 		triangleArea();
-	}
+	} */
 }
 
 void mainProgram()
