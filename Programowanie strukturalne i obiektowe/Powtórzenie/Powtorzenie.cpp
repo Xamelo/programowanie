@@ -67,7 +67,6 @@ void doSelctedTask(int selectedOption)
 	{
 		squareArea();
 	}
-
 	if (selectedOption == 2)
 	{
 		triangleArea();
