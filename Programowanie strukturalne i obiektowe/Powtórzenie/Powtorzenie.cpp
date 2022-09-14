@@ -97,6 +97,7 @@ void divisorOfNumber()
 		if (number % i == 0)
 			cout << i << ", ";
 	}
+
 	cout << number;
 	cout << endl;
 }
