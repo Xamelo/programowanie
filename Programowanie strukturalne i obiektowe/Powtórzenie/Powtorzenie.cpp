@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void showMenu()
@@ -10,6 +11,7 @@ void showMenu()
 	cout << "3. Liczby nieparzyste od podanej liczby\n";
 	cout << "4. Ciag Fibonnaciego\n";
 	cout << "5. Dzielniki podanej liczby\n";
+	cout << "6. Liczba zapisana slownie\n";
 
 	cout << "0. Zamknij program\n";
 }
@@ -102,6 +104,17 @@ void divisorOfNumber()
 	cout << endl;
 }
 
+void numberWords()
+{
+	system("cls");
+	string slowa[10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+	int number;
+	cout << "Podaj liczbe, do zapisania jej slownie: ";
+	cin >> number;
+	
+	
+}
+
 void doSelctedTask(int selectedOption)
 {
 	switch (selectedOption)
@@ -120,6 +133,9 @@ void doSelctedTask(int selectedOption)
 		break;
 	case 5:
 		divisorOfNumber();
+		break;
+	case 6:
+		numberWords();
 		break;
 	case 0:
 		return;
