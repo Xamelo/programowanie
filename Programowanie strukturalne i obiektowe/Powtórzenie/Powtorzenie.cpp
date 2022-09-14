@@ -7,6 +7,9 @@ void showMenu()
 	cout << "Menu:\n";
 	cout << "1. Pole kwadratu\n";
 	cout << "2. Pole trojkatu\n";
+	cout << "3. Liczby nieparzyste od podanej liczby\n";
+	cout << "4. Ciag Fibonnaciego\n";
+	cout << "5. Dzielniki podanej liczby\n";
 
 	cout << "0. Zamknij program\n";
 }
@@ -44,6 +47,60 @@ void triangleArea()
 	cout << "Pole trojkata wynosi: " << area << endl;
 }
 
+void oddNumbers()
+{
+	system("cls");
+	int number;
+
+	cout << "Podaj liczbe, od ktorej wyswietla sie liczby nieparzystye: ";
+	cin >> number;
+
+	for (int i = number; i >= 0; i--)
+	{
+		if (i % 2 != 0)
+			cout << i << ", ";
+	}
+	cout << endl;
+}
+
+void stringOfFibonnaci()
+{
+	system("cls");
+	int howmany;
+	cout << "Ile wyswielic liczb ciagu Fibonnaciego: ";
+	cin >> howmany;
+	long long n1 = 0;
+	long long n2 = 1;
+	for (int i = 0; i < howmany; i++)
+	{
+		cout << n1 << ", ";
+		n1 += n2;
+		n2 = n1 - n2;
+		if (n1 < 0)
+		{
+			cout << "Za duza liczba do wyswietlenia\n";
+			break;
+		}
+	}
+	cout << endl;
+}
+
+void divisorOfNumber()
+{
+	system("cls");
+	int number;
+	cout << "Podaj liczbe, ktorej wyswietla sie dzielniki: ";
+	cin >> number;
+
+	for (int i = 1; i <= number / 2; i++)
+	{
+		if (number % i == 0)
+			cout << i << ", ";
+	}
+	cout << number;
+	cout << endl;
+}
+
 void doSelctedTask(int selectedOption)
 {
 	switch (selectedOption)
@@ -54,6 +111,15 @@ void doSelctedTask(int selectedOption)
 	case 2:
 		triangleArea();
 		break;
+	case 3:
+		oddNumbers();
+		break;
+	case 4:
+		stringOfFibonnaci();
+		break;
+	case 5:
+		divisorOfNumber();
+		break;
 	case 0:
 		return;
 	default:
@@ -62,11 +128,12 @@ void doSelctedTask(int selectedOption)
 	}
 
 	system("pause");
-	
+
 	/* if (selectedOption == 1)
 	{
 		squareArea();
 	}
+
 	if (selectedOption == 2)
 	{
 		triangleArea();
