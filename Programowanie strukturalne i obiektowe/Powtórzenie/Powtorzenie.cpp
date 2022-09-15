@@ -56,11 +56,18 @@ void oddNumbers()
 
 	cout << "Podaj liczbe, od ktorej wyswietla sie liczby nieparzystye: ";
 	cin >> number;
-
-	for (int i = number; i >= 0; i--)
+	/*for (int i = number; i >= 0; i--)
 	{
 		if (i % 2 != 0)
 			cout << i << ", ";
+	}*/
+	if (number > 0)
+		number--;
+	
+	while (number > 0)
+	{
+		cout << number << ", ";
+		number = number - 2;
 	}
 	cout << endl;
 }
@@ -99,7 +106,6 @@ void divisorOfNumber()
 		if (number % i == 0)
 			cout << i << ", ";
 	}
-
 	cout << number;
 	cout << endl;
 }
