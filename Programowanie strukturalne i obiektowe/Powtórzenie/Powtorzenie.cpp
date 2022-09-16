@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+
 using namespace std;
 
 void showMenu()
@@ -101,24 +102,60 @@ void divisorOfNumber()
 	cout << "Podaj liczbe, ktorej wyswietla sie dzielniki: ";
 	cin >> number;
 
-	for (int i = 1; i <= number / 2; i++)
+	/*for (int i = 1; i <= number / 2; i++)
 	{
 		if (number % i == 0)
 			cout << i << ", ";
 	}
 	cout << number;
 	cout << endl;
+
+	wersja 2
+	for (int i = 1; i <= sqrt(number); i++)
+	{
+		if (number % i == 0)
+		{
+			cout << i << ", ";
+			int divider = number / i;
+			if (divider != i)
+				cout << (number / i) << ", ";
+		}
+	}
+	cout << endl;
+	*/
+	int changeNumber;
+	if (number % 2 == 0)
+		changeNumber = 1;
+	else
+		changeNumber = 2;
+	for (int i = 1; i <= sqrt(number); i = i + changeNumber)
+	{
+		if (number % i == 0)
+		{
+			cout << i << ", ";
+			int divider = number / i;
+			if (divider != i)
+				cout << divider << ", ";
+		}
+	}
+	cout << endl;
 }
 
 void numberWords()
 {
 	system("cls");
-	string slowa[10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+	string words[10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 	int number;
 	cout << "Podaj liczbe, do zapisania jej slownie: ";
 	cin >> number;
-	
-	
+
+	do
+	{
+		int digit = number % 10;
+		number = number / 10;
+		cout << words[digit] << ' ';
+
+	} while (number != 0);
 }
 
 void doSelctedTask(int selectedOption)
