@@ -145,10 +145,11 @@ void numberWords()
 {
 	system("cls");
 	string words[10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-	int number;
+	int numberFromUser;
 	cout << "Podaj liczbe, do zapisania jej slownie: ";
-	cin >> number;
+	cin >> numberFromUser;
 
+	int number = numberFromUser;
 	do
 	{
 		int digit = number % 10;
@@ -156,6 +157,20 @@ void numberWords()
 		cout << words[digit] << ' ';
 
 	} while (number != 0);
+	cout << endl;
+
+	number = numberFromUser;
+	string stringNumber = "";
+	do
+	{
+		int digit = number % 10;
+		number = number / 10;
+		
+		stringNumber = words[digit] + " " + stringNumber;
+
+	} while (number != 0);
+	cout << stringNumber;
+	cout << endl;
 }
 
 void doSelctedTask(int selectedOption)
