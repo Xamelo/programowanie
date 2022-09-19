@@ -130,18 +130,40 @@ void Zadanie3()
 void Zadanie4()
 {
 	std::cout << "Podaj liczbe:\n";
-	int number;
-	std::cin >> number;
+	int numberFromUser;
+	std::cin >> numberFromUser;
 
+	std::string arrayOfWordsNumbers[10] = {"zero", "jeden", "dwa", "trzy",
+											"cztery", "piec", "szesc", 
+											"sieden", "osiem", "dziewiec"};
+	//arrayOfWordsNumbers[0] = "zero";
+	//arrayOfWordsNumbers[1] = "jeden";
+
+	int number = numberFromUser;
 	do
 	{
 		int digit = number % 10;
 		number = number / 10;
 		
+		std::cout << arrayOfWordsNumbers[digit] << " ";
 
+	} while (number != 0);
+	std::cout << "\n";
+
+	number = numberFromUser;
+	std::string stringNumber = "";
+
+	do
+	{
+		int digit = number % 10;
+		number = number / 10;
+
+		stringNumber = arrayOfWordsNumbers[digit] + " " + stringNumber;
 
 	} while (number != 0);
 
+	std::cout << stringNumber;
+	std::cout << "\n";
 }
 
 void doSelectedTask(int& selectedOption)
@@ -163,7 +185,7 @@ void doSelectedTask(int& selectedOption)
 	case 5:
 		Zadanie3();
 		break;
-	case 5:
+	case 6:
 		Zadanie4();
 		break;
 	case 0:
