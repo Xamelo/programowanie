@@ -13,6 +13,8 @@ void showMenu()
 	cout << "4. Ciag Fibonnaciego\n";
 	cout << "5. Dzielniki podanej liczby\n";
 	cout << "6. Liczba zapisana slownie\n";
+	cout << "7. Przeksztalcanie z systemu dziesiętnego na binarny\n";
+	cout << "8. Przeksztalcanie na system binarny lub szestnastkowy\n";
 
 	cout << "0. Zamknij program\n";
 }
@@ -64,7 +66,7 @@ void oddNumbers()
 	}*/
 	if (number > 0)
 		number--;
-	
+
 	while (number > 0)
 	{
 		cout << number << ", ";
@@ -144,7 +146,7 @@ void divisorOfNumber()
 void numberWords()
 {
 	system("cls");
-	string words[10] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
+	string words[10] = { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
 	int numberFromUser;
 	cout << "Podaj liczbe, do zapisania jej slownie: ";
 	cin >> numberFromUser;
@@ -165,12 +167,43 @@ void numberWords()
 	{
 		int digit = number % 10;
 		number = number / 10;
-		
+
 		stringNumber = words[digit] + " " + stringNumber;
 
 	} while (number != 0);
 	cout << stringNumber;
 	cout << endl;
+}
+
+void decimalToBinary()
+{
+	system("cls");
+	int decimalNumber;
+	string result;
+	cout << "Podaj liczbe w systemie dziesietnym do zamiany na binarny: ";
+	cin >> decimalNumber;
+
+	while (decimalNumber != 0)
+	{
+		result = (decimalNumber % 2 ? "1" : "0") + result;
+		decimalNumber = decimalNumber / 2;
+	}
+	cout << result;
+	cout << endl;
+}
+
+void hexOrBinary()
+{
+	system("cls");
+	int option;
+	cout << "Wybierz system do przemiany (2 - 16): ";
+	cin >> option;
+	switch (option)
+	{
+	case 2:
+		decimalToBinary();
+		break;
+	}
 }
 
 void doSelctedTask(int selectedOption)
@@ -194,6 +227,12 @@ void doSelctedTask(int selectedOption)
 		break;
 	case 6:
 		numberWords();
+		break;
+	case 7:
+		decimalToBinary();
+		break;
+	case 8:
+		hexOrBinary();
 		break;
 	case 0:
 		return;
