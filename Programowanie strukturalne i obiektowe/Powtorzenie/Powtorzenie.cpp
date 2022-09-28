@@ -10,6 +10,8 @@ void showMenu()
 	std::cout << "4. Zadanie 2\n";
 	std::cout << "5. Zadanie 3\n";
 	std::cout << "6. Zadanie 4\n";
+	std::cout << "7. Zamiana na system binarny\n";
+	std::cout << "8. Zamiana na system 2-16\n";
 
 	std::cout << "0. Zamknij program\n";
 }
@@ -133,9 +135,9 @@ void Zadanie4()
 	int numberFromUser;
 	std::cin >> numberFromUser;
 
-	std::string arrayOfWordsNumbers[10] = {"zero", "jeden", "dwa", "trzy",
-											"cztery", "piec", "szesc", 
-											"sieden", "osiem", "dziewiec"};
+	std::string arrayOfWordsNumbers[10] = { "zero", "jeden", "dwa", "trzy",
+											"cztery", "piec", "szesc",
+											"sieden", "osiem", "dziewiec" };
 	//arrayOfWordsNumbers[0] = "zero";
 	//arrayOfWordsNumbers[1] = "jeden";
 
@@ -144,7 +146,7 @@ void Zadanie4()
 	{
 		int digit = number % 10;
 		number = number / 10;
-		
+
 		std::cout << arrayOfWordsNumbers[digit] << " ";
 
 	} while (number != 0);
@@ -164,6 +166,62 @@ void Zadanie4()
 
 	std::cout << stringNumber;
 	std::cout << "\n";
+}
+
+void DecToBin()
+{
+	std::cout << "Podaj liczbe w systemie dziesietnym:\n";
+	int decNumber;
+	std::cin >> decNumber;
+
+	std::string binNumber = "";
+	int tmpDecNumber = decNumber;
+	while (tmpDecNumber != 0)
+	{
+		int divisionRest = tmpDecNumber % 2;
+		tmpDecNumber = tmpDecNumber / 2;
+		binNumber = (char)(divisionRest + 48) + binNumber;
+	}
+
+	if (binNumber == "")
+		binNumber = "0";
+
+	std::cout << "Liczba w systemie dziesietnym\t" << decNumber << "\n";
+	std::cout << "Liczba w systemie binarnym\t" << binNumber << "\n";
+}
+
+void DecToAnySystem()
+{
+	std::cout << "Podaj liczbe w systemie dziesietnym:\n";
+	int decNumber;
+	std::cin >> decNumber;
+
+	std::cout << "Podaj system docelowy (2-16):\n";
+	int targetSystem;
+	std::cin >> targetSystem;
+
+	if (targetSystem < 2 || targetSystem > 16)
+	{
+		std::cout << "Podales zly system\n";
+		return;
+	}
+
+	char divisionRestsInChar[16] = { '0', '1', '2', '3', '4', '5','6','7','8','9','A', 'B', 'C', 'D', 'E', 'F' };
+
+	std::string targetSystemNumber = "";
+	int tmpDecNumber = decNumber;
+	while (tmpDecNumber != 0)
+	{
+		int divisionRest = tmpDecNumber % targetSystem;
+		tmpDecNumber = tmpDecNumber / targetSystem;
+		targetSystemNumber = divisionRestsInChar[divisionRest] + targetSystemNumber;
+	}
+
+	if (targetSystemNumber == "")
+		targetSystemNumber = "0";
+
+	std::cout << "Liczba w systemie dziesietnym\t" << decNumber << "\n";
+	std::cout << "Liczba w systemie " << targetSystem << "\t" << targetSystemNumber << "\n";
 }
 
 void doSelectedTask(int& selectedOption)
@@ -187,6 +245,12 @@ void doSelectedTask(int& selectedOption)
 		break;
 	case 6:
 		Zadanie4();
+		break;
+	case 7:
+		DecToBin();
+		break;
+	case 8:
+		DecToAnySystem();
 		break;
 	case 0:
 		return;
