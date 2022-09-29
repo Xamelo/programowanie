@@ -12,6 +12,7 @@ void showMenu()
 	std::cout << "6. Zadanie 4\n";
 	std::cout << "7. Zamiana na system binarny\n";
 	std::cout << "8. Zamiana na system 2-16\n";
+	std::cout << "9. Wydawanie reszty\n";
 
 	std::cout << "0. Zamknij program\n";
 }
@@ -224,6 +225,41 @@ void DecToAnySystem()
 	std::cout << "Liczba w systemie " << targetSystem << "\t" << targetSystemNumber << "\n";
 }
 
+void GivingTheRest()
+{
+	std::cout << "Podaj kwote do wydania:\n";
+	float amount;
+	std::cin >> amount;
+
+	const int count = 17;
+	float tableOfDenominations[count] = {1000, 500, 200, 100, 50, 20, 10, 5, 2, 1, 0.50, 0.25, 0.20, 0.10, 0.05, 0.02, 0.01 };
+	int countOfDenominations[count];
+
+	for (int i = 0; i < count; i++)
+		countOfDenominations[i] = 0;
+
+	int actDenomination = 0;
+
+	float tmpAmount = amount;
+	while (tmpAmount > 0)
+	{
+		if (tmpAmount >= tableOfDenominations[actDenomination])
+		{
+			countOfDenominations[actDenomination]++;
+			//tmpAmount = tmpAmount - tableOfDenominations[actDenomination];
+			tmpAmount -= tableOfDenominations[actDenomination];
+		}
+		else
+			actDenomination++;
+	}
+
+	std::cout << "Kwota do wydania: " << amount << "\n";
+	for (int i = 0; i < count; i++)
+	{
+		std::cout << "Nominal " << tableOfDenominations[i] << " x " << countOfDenominations[i] << "\n";
+	}
+}
+
 void doSelectedTask(int& selectedOption)
 {
 	switch (selectedOption)
@@ -251,6 +287,9 @@ void doSelectedTask(int& selectedOption)
 		break;
 	case 8:
 		DecToAnySystem();
+		break;
+	case 9:
+		GivingTheRest();
 		break;
 	case 0:
 		return;
