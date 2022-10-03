@@ -12,6 +12,12 @@ double calculateDistance(int a, int b)
     return distance;
 }
 
+double calculateDistance(Point p)
+{
+    double distance = sqrt(p.x * p.x + p.y * p.y);
+    return distance;
+}
+
 void CoordinateTestVersion1()
 {
     int x, y;
@@ -37,7 +43,7 @@ void CoordinateTestVersion2()
     std::cin >> userPoint.y;
 
     //double distance = sqrt(x * x + y * y);
-    double distance = calculateDistance(userPoint.x, userPoint.y);
+    double distance = calculateDistance(userPoint);
 
     std::cout << "Odleglosc to: " << distance << "\n";
 }
