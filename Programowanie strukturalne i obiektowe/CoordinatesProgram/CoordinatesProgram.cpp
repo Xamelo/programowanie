@@ -52,3 +52,37 @@ int main()
 {
     CoordinateTestVersion2();
 }
+
+std::string name;
+std::string surname;
+int age;
+int hight;
+
+struct Person
+{
+    std::string name;
+    std::string surname;
+    int age;
+    int hight;
+    Point coordinate;
+};
+
+Person p1;
+//p1.name
+//p1.coordinate.x = 5;
+
+
+std::string nameTab[5];
+std::string surnameTab[5];
+int ageTab[5];
+int hightTab[5];
+
+Person pTab[5];
+//pTab[1].name = "Ala";
+
+void Show(Person tab[5])
+{
+
+}
+
+//Show(pTab);
