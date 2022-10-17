@@ -5,6 +5,11 @@ struct CoordinateGPS
     int x, y;
 };
 
+struct Direction
+{
+    int x, y;
+};
+
 class Car
 {
 public:
@@ -14,6 +19,8 @@ public:
         this->name = name;
         coordinateGPS.x = 0;
         coordinateGPS.y = 0;
+        direction.x = 1;
+        direction.y = 0;
     }
 
     Car(std::string name, int x, int y)
@@ -21,6 +28,8 @@ public:
         this->name = name;
         coordinateGPS.x = x;
         coordinateGPS.y = y;
+        direction.x = 1;
+        direction.y = 0;
     }
 
     void ShowInfo()
@@ -33,15 +42,74 @@ public:
 
     void MoveForward()
     {
+        coordinateGPS.x += direction.x;
+        coordinateGPS.y += direction.y;
+    }
 
+    void TurnLeft()
+    {
+        /*if (direction.x == 1 && direction.y == 0)
+        {
+            direction.x = 0;
+            direction.y = 1;
+        }
+        else if (direction.x == 0 && direction.y == 1)
+        {
+            direction.x = -1;
+            direction.y = 0;
+        }
+        else if (direction.x == -1 && direction.y == 0)
+        {
+            direction.x = 0;
+            direction.y = -1;
+        }
+        else if (direction.x == 0 && direction.y == -1)
+        {
+            direction.x = 1;
+            direction.y = 0;
+        }*/
+
+        int tmpX = direction.x;
+        direction.x = -direction.y;
+        direction.y = tmpX;
+
+    }
+
+    void TurnRight()
+    {
+        /*if (direction.x == 1 && direction.y == 0)
+        {
+            direction.x = 0;
+            direction.y = -1;
+        }
+        else if (direction.x == 0 && direction.y == 1)
+        {
+            direction.x = 1;
+            direction.y = 0;
+        }
+        else if (direction.x == -1 && direction.y == 0)
+        {
+            direction.x = 0;
+            direction.y = 1;
+        }
+        else if (direction.x == 0 && direction.y == -1)
+        {
+            direction.x = -1;
+            direction.y = 0;
+        }*/
+
+        int tmpX = direction.x;
+        direction.x = direction.y;
+        direction.y = -tmpX;
     }
 
 protected:
 
 private:
     std::string name;
-
     CoordinateGPS coordinateGPS;
+    Direction direction;
+
 };
 
 int main()
@@ -53,4 +121,9 @@ int main()
 
     carFirst.ShowInfo();
     carSecond.ShowInfo();
+
+    carFirst.MoveForward();
+    carFirst.MoveForward();
+
+    carFirst.ShowInfo();
 }
