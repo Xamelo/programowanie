@@ -14,6 +14,8 @@ class Car
 {
 public:
 
+#pragma region Konstruktory
+
     Car(std::string name)
     {
         this->name = name;
@@ -32,6 +34,8 @@ public:
         direction.y = 0;
     }
 
+#pragma endregion
+
     void ShowInfo()
     {
         std::cout << "***********************************\n";
@@ -45,6 +49,8 @@ public:
         coordinateGPS.x += direction.x;
         coordinateGPS.y += direction.y;
     }
+
+#pragma region Turn method
 
     void TurnLeft()
     {
@@ -103,6 +109,14 @@ public:
         direction.y = -tmpX;
     }
 
+    void TurnBack()
+    {
+        TurnRight();
+        TurnRight();
+    }
+
+#pragma endregion
+
 protected:
 
 private:
@@ -123,6 +137,7 @@ int main()
     carSecond.ShowInfo();
 
     carFirst.MoveForward();
+    carFirst.TurnLeft();
     carFirst.MoveForward();
 
     carFirst.ShowInfo();
