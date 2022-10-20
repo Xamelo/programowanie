@@ -26,7 +26,8 @@ int main()
     std::cout << "Year:" << 1900 + ltm->tm_year << std::endl;
     std::cout << "Month: " << 1 + ltm->tm_mon << std::endl;
     std::cout << "Day: " << ltm->tm_mday << std::endl;
-    std::cout << "Time: " << ltm->tm_hour << ":";
+    std::cout << "Time: ";
+    std::cout << ltm->tm_hour << ":";
     std::cout << ltm->tm_min << ":";
     std::cout << ltm->tm_sec << std::endl;
     delete ltm;
