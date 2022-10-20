@@ -15,6 +15,7 @@ void showMenu()
 	cout << "6. Liczba zapisana slownie\n";
 	cout << "7. Przeksztalcanie z systemu dziesiętnego na binarny\n";
 	cout << "8. Przeksztalcanie na system binarny lub szestnastkowy\n";
+	cout << "9. Reszta pieniezna\n";
 
 	cout << "0. Zamknij program\n";
 }
@@ -198,12 +199,22 @@ void hexOrBinary()
 	int option;
 	cout << "Wybierz system do przemiany (2 - 16): ";
 	cin >> option;
-	switch (option)
+}
+
+void rest()
+{
+	system("cls");
+	int sum, rest;
+	cout << "Podaj kwote do rozlozenia na pieniadze: ";
+	cin >> sum;
+
+	int tab_zl[8] = { 200, 100, 50, 20, 10, 5, 2, 1 };
+	for (int i = 0; i < 8; i++)
 	{
-	case 2:
-		decimalToBinary();
-		break;
+
 	}
+
+	cout << endl;
 }
 
 void doSelctedTask(int selectedOption)
@@ -233,6 +244,9 @@ void doSelctedTask(int selectedOption)
 		break;
 	case 8:
 		hexOrBinary();
+		break;
+	case 9:
+		rest();
 		break;
 	case 0:
 		return;
