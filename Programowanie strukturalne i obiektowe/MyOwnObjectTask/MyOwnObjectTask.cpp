@@ -19,17 +19,17 @@ int main()
     std::cout << "Number of second since January 1,1970 is:: " 
         << now << std::endl;
 
-    tm* ltm = new tm;
-    localtime_s(ltm , &now);
+    tm* localTimeStructTm = new tm;
+    localtime_s(localTimeStructTm , &now);
 
     // print various components of tm structure.
-    std::cout << "Year:" << 1900 + ltm->tm_year << std::endl;
-    std::cout << "Month: " << 1 + ltm->tm_mon << std::endl;
-    std::cout << "Day: " << ltm->tm_mday << std::endl;
+    std::cout << "Year:" << 1900 + localTimeStructTm->tm_year << std::endl;
+    std::cout << "Month: " << 1 + localTimeStructTm->tm_mon << std::endl;
+    std::cout << "Day: " << localTimeStructTm->tm_mday << std::endl;
     std::cout << "Time: ";
-    std::cout << ltm->tm_hour << ":";
-    std::cout << ltm->tm_min << ":";
-    std::cout << ltm->tm_sec << std::endl;
-    delete ltm;
+    std::cout << localTimeStructTm->tm_hour << ":";
+    std::cout << localTimeStructTm->tm_min << ":";
+    std::cout << localTimeStructTm->tm_sec << std::endl;
+    delete localTimeStructTm;
 }
 
