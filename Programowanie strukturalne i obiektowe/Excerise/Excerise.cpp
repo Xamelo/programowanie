@@ -2,10 +2,10 @@
 #include <ctime>
 using namespace std;
 
-struct Informations
+struct InformationsOfPerson
 {
 	string name, surname, height, weight;
-	int dateOfBirth, age;
+	int dateOfBirth;
 };
 
 class Person
@@ -40,22 +40,33 @@ public:
 		cout << "Name: " << informations.name << '\n';
 		cout << "Surname: " << informations.surname << '\n';
 		cout << "Year of birth: " << informations.dateOfBirth << '\n';
-		cout << "Age: " << (currentTime() - informations.dateOfBirth)  << '\n';
+		cout << "Age: " << (currentTime() - informations.dateOfBirth) << '\n';
 		cout << "Height: " << informations.height << '\n';
 		cout << "Weight: " << informations.weight << '\n';
+	}
+
+	void adult()
+	{
+		cout << "============\n";
+		if ((currentTime() - informations.dateOfBirth) >= 18)
+			cout << "Adult: yes\n";
+		else
+			cout << "Adult: no\n";
+		cout << "============\n";
 		cout << "*********************\n";
 	}
 
 protected:
 
 private:
-	Informations informations;
+	InformationsOfPerson informations;
 };
 
 int main()
 {
-	Person person("Jackob", "Black", "180cm", "78kg", 2000);
+	Person person("Jackob", "Black", "180cm", "78kg", 2010);
 	person.showInfo();
+	person.adult();
 }
 /*
 Zadanie
