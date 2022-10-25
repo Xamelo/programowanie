@@ -21,12 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-<<<<<<< HEAD
-    <ProjectGuid>{e9fbfa59-8e5f-41d1-9113-501bee640003}</ProjectGuid>
-=======
-    <ProjectGuid>{1072accf-2da5-4606-94e7-a56f400422ec}</ProjectGuid>
->>>>>>> 0b26e0378eba21941ce9c891f3171dbaab82b6a9
-    <RootNamespace>DrivingCar</RootNamespace>
+    <ProjectGuid>{4e6272ea-0dc1-4d7e-b6f4-dfda83bac898}</ProjectGuid>
+    <RootNamespace>CoordinatesProgram</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -143,7 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DrivingCar.cpp" />
+    <ClCompile Include="CoordinatesProgram.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -74,7 +74,7 @@ int main()
 }
 /*
 Zadanie
-Napisaæ klasê (oraz kod testuj¹cy) opisuj¹cy osobê. 
+Napisaæ klasê (oraz kod testuj¹cy) opisuj¹cy osobê.
 Dodaæ 5 pól opisuj¹cych osobê (ma byæ rok urodzenia)
 dodanie konstruktorów umo¿liwiaj¹cych utworzenie
 obiektu na parê sposobów
