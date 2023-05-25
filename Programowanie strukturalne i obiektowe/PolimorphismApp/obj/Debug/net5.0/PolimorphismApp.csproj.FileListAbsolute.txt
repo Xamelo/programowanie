@@ -1,0 +1,16 @@
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\bin\Debug\net5.0\PolimorphismApp.exe
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\bin\Debug\net5.0\PolimorphismApp.deps.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\bin\Debug\net5.0\PolimorphismApp.runtimeconfig.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\bin\Debug\net5.0\PolimorphismApp.runtimeconfig.dev.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\bin\Debug\net5.0\PolimorphismApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\bin\Debug\net5.0\ref\PolimorphismApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\bin\Debug\net5.0\PolimorphismApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\obj\Debug\net5.0\PolimorphismApp.csproj.AssemblyReference.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\obj\Debug\net5.0\PolimorphismApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\obj\Debug\net5.0\PolimorphismApp.AssemblyInfoInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\obj\Debug\net5.0\PolimorphismApp.AssemblyInfo.cs
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\obj\Debug\net5.0\PolimorphismApp.csproj.CoreCompileInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\obj\Debug\net5.0\PolimorphismApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\obj\Debug\net5.0\ref\PolimorphismApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\obj\Debug\net5.0\PolimorphismApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PolimorphismApp\obj\Debug\net5.0\PolimorphismApp.genruntimeconfig.cache

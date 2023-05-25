@@ -1,0 +1,16 @@
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\bin\Debug\net5.0\PropertiesApp.exe
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\bin\Debug\net5.0\PropertiesApp.deps.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\bin\Debug\net5.0\PropertiesApp.runtimeconfig.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\bin\Debug\net5.0\PropertiesApp.runtimeconfig.dev.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\bin\Debug\net5.0\PropertiesApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\bin\Debug\net5.0\ref\PropertiesApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\bin\Debug\net5.0\PropertiesApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\obj\Debug\net5.0\PropertiesApp.csproj.AssemblyReference.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\obj\Debug\net5.0\PropertiesApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\obj\Debug\net5.0\PropertiesApp.AssemblyInfoInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\obj\Debug\net5.0\PropertiesApp.AssemblyInfo.cs
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\obj\Debug\net5.0\PropertiesApp.csproj.CoreCompileInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\obj\Debug\net5.0\PropertiesApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\obj\Debug\net5.0\ref\PropertiesApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\obj\Debug\net5.0\PropertiesApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\PropertiesApp\obj\Debug\net5.0\PropertiesApp.genruntimeconfig.cache
