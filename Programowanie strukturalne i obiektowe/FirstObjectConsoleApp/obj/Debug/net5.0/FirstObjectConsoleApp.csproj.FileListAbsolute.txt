@@ -1,0 +1,16 @@
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\bin\Debug\net5.0\FirstObjectConsoleApp.exe
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\bin\Debug\net5.0\FirstObjectConsoleApp.deps.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\bin\Debug\net5.0\FirstObjectConsoleApp.runtimeconfig.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\bin\Debug\net5.0\FirstObjectConsoleApp.runtimeconfig.dev.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\bin\Debug\net5.0\FirstObjectConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\bin\Debug\net5.0\ref\FirstObjectConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\bin\Debug\net5.0\FirstObjectConsoleApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\obj\Debug\net5.0\FirstObjectConsoleApp.csproj.AssemblyReference.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\obj\Debug\net5.0\FirstObjectConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\obj\Debug\net5.0\FirstObjectConsoleApp.AssemblyInfoInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\obj\Debug\net5.0\FirstObjectConsoleApp.AssemblyInfo.cs
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\obj\Debug\net5.0\FirstObjectConsoleApp.csproj.CoreCompileInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\obj\Debug\net5.0\FirstObjectConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\obj\Debug\net5.0\ref\FirstObjectConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\obj\Debug\net5.0\FirstObjectConsoleApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstObjectConsoleApp\obj\Debug\net5.0\FirstObjectConsoleApp.genruntimeconfig.cache

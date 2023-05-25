@@ -1,0 +1,16 @@
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\bin\Debug\net5.0\FirstConsoleApp.exe
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\bin\Debug\net5.0\FirstConsoleApp.deps.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\bin\Debug\net5.0\FirstConsoleApp.runtimeconfig.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\bin\Debug\net5.0\FirstConsoleApp.runtimeconfig.dev.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\bin\Debug\net5.0\FirstConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\bin\Debug\net5.0\ref\FirstConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\bin\Debug\net5.0\FirstConsoleApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\obj\Debug\net5.0\FirstConsoleApp.csproj.AssemblyReference.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\obj\Debug\net5.0\FirstConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\obj\Debug\net5.0\FirstConsoleApp.AssemblyInfoInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\obj\Debug\net5.0\FirstConsoleApp.AssemblyInfo.cs
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\obj\Debug\net5.0\FirstConsoleApp.csproj.CoreCompileInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\obj\Debug\net5.0\FirstConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\obj\Debug\net5.0\ref\FirstConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\obj\Debug\net5.0\FirstConsoleApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\FirstConsoleApp\obj\Debug\net5.0\FirstConsoleApp.genruntimeconfig.cache
