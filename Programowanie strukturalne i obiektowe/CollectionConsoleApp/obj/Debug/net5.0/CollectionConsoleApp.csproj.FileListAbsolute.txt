@@ -1,0 +1,16 @@
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\bin\Debug\net5.0\CollectionConsoleApp.exe
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\bin\Debug\net5.0\CollectionConsoleApp.deps.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\bin\Debug\net5.0\CollectionConsoleApp.runtimeconfig.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\bin\Debug\net5.0\CollectionConsoleApp.runtimeconfig.dev.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\bin\Debug\net5.0\CollectionConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\bin\Debug\net5.0\ref\CollectionConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\bin\Debug\net5.0\CollectionConsoleApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\obj\Debug\net5.0\CollectionConsoleApp.csproj.AssemblyReference.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\obj\Debug\net5.0\CollectionConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\obj\Debug\net5.0\CollectionConsoleApp.AssemblyInfoInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\obj\Debug\net5.0\CollectionConsoleApp.AssemblyInfo.cs
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\obj\Debug\net5.0\CollectionConsoleApp.csproj.CoreCompileInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\obj\Debug\net5.0\CollectionConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\obj\Debug\net5.0\ref\CollectionConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\obj\Debug\net5.0\CollectionConsoleApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\CollectionConsoleApp\obj\Debug\net5.0\CollectionConsoleApp.genruntimeconfig.cache
