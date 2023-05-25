@@ -1,0 +1,16 @@
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\obj\Debug\net5.0\LotOfTasks.csproj.AssemblyReference.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\obj\Debug\net5.0\LotOfTasks.GeneratedMSBuildEditorConfig.editorconfig
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\obj\Debug\net5.0\LotOfTasks.AssemblyInfoInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\obj\Debug\net5.0\LotOfTasks.AssemblyInfo.cs
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\obj\Debug\net5.0\LotOfTasks.csproj.CoreCompileInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\bin\Debug\net5.0\LotOfTasks.exe
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\bin\Debug\net5.0\LotOfTasks.deps.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\bin\Debug\net5.0\LotOfTasks.runtimeconfig.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\bin\Debug\net5.0\LotOfTasks.runtimeconfig.dev.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\bin\Debug\net5.0\LotOfTasks.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\bin\Debug\net5.0\ref\LotOfTasks.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\bin\Debug\net5.0\LotOfTasks.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\obj\Debug\net5.0\LotOfTasks.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\obj\Debug\net5.0\ref\LotOfTasks.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\obj\Debug\net5.0\LotOfTasks.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\Tasks\obj\Debug\net5.0\LotOfTasks.genruntimeconfig.cache

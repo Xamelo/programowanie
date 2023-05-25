@@ -1,0 +1,16 @@
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\obj\Debug\net5.0\ShapeConsoleApp.csproj.AssemblyReference.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\obj\Debug\net5.0\ShapeConsoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\obj\Debug\net5.0\ShapeConsoleApp.AssemblyInfoInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\obj\Debug\net5.0\ShapeConsoleApp.AssemblyInfo.cs
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\obj\Debug\net5.0\ShapeConsoleApp.csproj.CoreCompileInputs.cache
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\bin\Debug\net5.0\ShapeConsoleApp.exe
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\bin\Debug\net5.0\ShapeConsoleApp.deps.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\bin\Debug\net5.0\ShapeConsoleApp.runtimeconfig.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\bin\Debug\net5.0\ShapeConsoleApp.runtimeconfig.dev.json
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\bin\Debug\net5.0\ShapeConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\bin\Debug\net5.0\ref\ShapeConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\bin\Debug\net5.0\ShapeConsoleApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\obj\Debug\net5.0\ShapeConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\obj\Debug\net5.0\ref\ShapeConsoleApp.dll
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\obj\Debug\net5.0\ShapeConsoleApp.pdb
+C:\Wiktor Fidler 2c\programowanie-aplikacjedesktopowe-2c\Programowanie strukturalne i obiektowe\ShapeConsoleApp\obj\Debug\net5.0\ShapeConsoleApp.genruntimeconfig.cache
