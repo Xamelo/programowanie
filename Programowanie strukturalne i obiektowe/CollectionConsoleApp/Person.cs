@@ -24,7 +24,6 @@ namespace CollectionConsoleApp
         public void Info()
         {
             Console.WriteLine(name + " " + surname + " " + age + "lat" + " " + height + "cm");
-
         }
 
     }
