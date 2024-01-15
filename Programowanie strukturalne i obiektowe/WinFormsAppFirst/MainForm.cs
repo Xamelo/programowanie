@@ -65,7 +65,7 @@ namespace WinFormsAppFirst
             if (e.Button == MouseButtons.Right)
                 labelMouseClick.Text = "Right click";*/
             
-            labelMouseClick.Text = e.Button.ToString() + " click"; 
+            labelMouseClick.Text = e.Button.ToString() + " click";
         }
     }
 }
