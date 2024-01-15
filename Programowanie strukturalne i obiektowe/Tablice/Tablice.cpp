@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include <math.h>
+#include <string>
+using namespace std;
 /*
 Napisz funkcję w której wczytamy 5 liczb i wyświetlimy je w odwrotnej kolejności.
  */
@@ -351,8 +353,8 @@ void Zadanie28()
 	std::cout << "Podaj zakres gorny:\n";
 	std::cin >> zakresGorny;
 
-	bool jestPierwsza[2000000000];
-	for (int i = 0; i < 2000000000; i++)
+	bool jestPierwsza[200];
+	for (int i = 0; i < 200; i++)
 		jestPierwsza[i] = true;
 
 	double wynikPierwiastka = sqrt(zakresGorny);
@@ -373,11 +375,6 @@ void Zadanie28()
 		if (jestPierwsza[i])
 			std::cout << i << ", ";
 
-}
-
-int main()
-{
-	Zadanie28();
 }
 
 void Szablon()
@@ -401,6 +398,172 @@ void Szablon()
 		std::cout << tablicaLiczb[i] << ", ";
 	}
 	std::cout << "\n";
+}
 
-	//Tutaj umieszczamy algorytm dla zadania
+//Tutaj umieszczamy algorytm dla zadania
+
+//ZADANIA
+//
+//
+//
+//
+//
+//
+//
+/*
+Zadania:
+1. Napisz funkcję, która dla kolekcji danych liczbowych obliczy średnią arytmetyczną.
+2. Napisz funkcję, która dla kolekcji danych liczbowych policzy ile jest liczb większych od średniej arytmetycznej.
+3. Napisz funkcje, która dla kolekcji danych liczbowych przeniesie te liczby do innej kolekcji w odwrotnej kolejności.
+4. Napisz funkcje, która dla kolekcji danych liczbowych obliczy częstotliwość występowania danej liczby.
+5. Napisz funkcję, która dla kolekcji danych liczbowych znajdzie najdłuższy rosnący podciąg.
+6. Napisz funkcję, która dla kolekcji danych liczbowych przeniesie te liczby do osobnych kolekcji liczb parzystych i nieparzystych.
+*
+*/
+
+#pragma region zadania
+float arithmeticAverage(int arrayOfNumbers[], int arraySize) //zadanie 1
+{
+	float sum = 0;
+	float result;
+	for (int i = 0; i < arraySize; i++)
+	{
+		sum += arrayOfNumbers[i];
+	}
+	return
+		result = sum / arraySize;
+}
+
+int countHigherNumbersOfArtimeticAverage(int arrayOfNumbers[], int arraySize) //zadanie2
+{
+	int sum = 0;
+	float averageOfNumbers = arithmeticAverage(arrayOfNumbers, arraySize);
+	for (int i = 0; i < arraySize; i++)
+	{
+		if (arrayOfNumbers[i] > averageOfNumbers)
+			sum++;
+	}
+	return sum;
+}
+
+void changeNumbersFromArrayToOther(int arrayOfNumbers[], int newArray[], int arraySize) //zadanie 3
+{
+	for (int i = 0; i < arraySize; i++)
+	{
+		newArray[i] = arrayOfNumbers[arraySize - i - 1];
+	}
+
+	for (int i = 0; i < arraySize; i++)
+	{
+		cout << newArray[i] << ", ";
+	}
+}
+
+void countFrequencyOfNumber(int arrayOfNumbers[], int arraySize) //zadanie 4
+{
+	const int SIZE = 101;
+	int arrayOfCounters[SIZE];
+
+	for (int i = 0; i < SIZE; i++)
+	{	
+		arrayOfCounters[i] = 0;
+	}
+	for (int i = 0; i < arraySize; i++)
+	{
+		arrayOfCounters[arrayOfNumbers[i]]++;
+	}
+	for (int i = 0; i < SIZE; i++)
+	{
+		cout << i << ": " << arrayOfCounters[i] << "\n";
+	}
+}
+
+//void longestIncreasingSequence() //zadanie 5
+
+void arraysOfEvenAndNotEvenNumbers(int array[], int arrayOfEvenNumbers[], int arrayOfNotEvenNumbers[], int arraySize) //zadanie 6
+{
+	int counterEvenNumbers = 0;
+	int counterNotEvenNumbers = 0;
+	for (int i = 0; i < arraySize; i++)
+	{
+		if (array[i] % 2 == 0)
+		{
+			arrayOfEvenNumbers[counterEvenNumbers] = array[i];
+			counterEvenNumbers++;
+		}
+		else
+		{
+			arrayOfNotEvenNumbers[counterNotEvenNumbers] = array[i];
+			counterNotEvenNumbers++;
+		}
+	}
+	
+#pragma region showing arrays
+
+	for (int i = 0; i < counterEvenNumbers; i++)
+	{
+		cout << arrayOfEvenNumbers[i] << ", ";
+	}
+
+	cout << "\n";
+
+	for (int i = 0; i < counterNotEvenNumbers; i++)
+	{
+		cout << arrayOfNotEvenNumbers[i] << ", ";
+	}
+
+#pragma endregion
+}
+#pragma endregion
+  
+int main()
+{
+#pragma region array
+
+	const int SIZE = 10;
+	int arrayOfNumbers[SIZE];
+
+	int rangeLower = 1;
+	int rangeUpper = 100;
+
+	srand(time(NULL));
+
+	for (int i = 0; i < SIZE; i++)
+	{
+		//zakres <zakresDolny; zakresGorny>
+		arrayOfNumbers[i] = rand() % (rangeUpper - rangeLower + 1) + rangeLower;
+	}
+
+	for (int i = 0; i < SIZE; i++)
+	{
+		cout << arrayOfNumbers[i] << ", ";
+	}
+	cout << "\n";
+
+#pragma endregion
+
+#pragma region zadania
+#pragma region zadanie1
+	//cout << "Artimetic average: " << arithmeticAverage(arrayOfNumbers, SIZE);
+#pragma endregion 
+
+#pragma region zadanie2
+	//cout << "Arithmetic average: " << arithmeticAverage(arrayOfNumbers, SIZE) << "\n";
+	//cout << "Number of numbers higher than arithmetic average: " << countHigherNumbersOfArtimeticAverage(arrayOfNumbers, SIZE);
+#pragma endregion
+
+#pragma region zadanie3
+	//int newArray[SIZE];
+	//changeNumbersFromArrayToOther(arrayOfNumbers, newArray, SIZE);
+#pragma endregion
+
+#pragma region zadanie4
+	//countFrequencyOfNumber(arrayOfNumbers, SIZE);
+#pragma endregion
+
+#pragma region zadanie6
+	//int arrayOfEvenNumbers[SIZE], arrayOfNotEvenNumbers[SIZE];
+	//arraysOfEvenAndNotEvenNumbers(arrayOfNumbers, arrayOfEvenNumbers, arrayOfNotEvenNumbers, SIZE);
+#pragma endregion
+#pragma endregion
 }

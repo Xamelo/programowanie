@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Uczeń\\Documents\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\CollectionConsoleApp.csproj": {}
+    "C:\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\CollectionConsoleApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Uczeń\\Documents\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\CollectionConsoleApp.csproj": {
+    "C:\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\CollectionConsoleApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Uczeń\\Documents\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\CollectionConsoleApp.csproj",
+        "projectUniqueName": "C:\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\CollectionConsoleApp.csproj",
         "projectName": "CollectionConsoleApp",
-        "projectPath": "C:\\Users\\Uczeń\\Documents\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\CollectionConsoleApp.csproj",
-        "packagesPath": "C:\\Users\\Uczeń\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Uczeń\\Documents\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\obj\\",
+        "projectPath": "C:\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\CollectionConsoleApp.csproj",
+        "packagesPath": "C:\\Users\\Uczeń - sala 213\\.nuget\\packages\\",
+        "outputPath": "C:\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\CollectionConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Uczeń\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Uczeń - sala 213\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
