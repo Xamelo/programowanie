@@ -102,7 +102,7 @@
             // 
             // buttonSubmit
             // 
-            buttonSubmit.Location = new Point(172, 271);
+            buttonSubmit.Location = new Point(158, 271);
             buttonSubmit.Name = "buttonSubmit";
             buttonSubmit.Size = new Size(83, 23);
             buttonSubmit.TabIndex = 7;
