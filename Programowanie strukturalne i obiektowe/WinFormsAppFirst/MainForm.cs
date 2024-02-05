@@ -64,8 +64,39 @@ namespace WinFormsAppFirst
                 labelMouseClick.Text = "Left click";
             if (e.Button == MouseButtons.Right)
                 labelMouseClick.Text = "Right click";*/
-            
+
             labelMouseClick.Text = e.Button.ToString() + " click";
+            labelMouseClick.ForeColor = Color.Green;
+        }
+
+        private void operation_Click(object sender, EventArgs e)
+        {
+            Decimal firstNumber = numericUpDownFirstNumber.Value;
+            Decimal secondNumber = numericUpDownSecondNumber.Value;
+            Decimal result = 0;
+
+            Button button = sender as Button;
+            if (button == null)
+                return;
+
+            string operation = button.Text;
+            switch (operation)
+            {
+                case "+":
+                    result = firstNumber + secondNumber;
+                    break;
+                case "-":
+                    result = firstNumber - secondNumber;
+                    break;
+                case "*":
+                    result = firstNumber * secondNumber;
+                    break;
+                case "/":
+                    result = firstNumber / secondNumber;
+                    break;
+            }
+
+            labelResult.Text += result.ToString();
         }
     }
 }

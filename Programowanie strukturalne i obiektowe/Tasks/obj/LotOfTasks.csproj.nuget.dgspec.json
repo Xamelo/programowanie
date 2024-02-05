@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\Tasks\\LotOfTasks.csproj",
         "projectName": "LotOfTasks",
         "projectPath": "C:\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\Tasks\\LotOfTasks.csproj",
-        "packagesPath": "C:\\Users\\Uczeń - sala 213\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Uczeń\\.nuget\\packages\\",
         "outputPath": "C:\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\Tasks\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Uczeń - sala 213\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Uczeń\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

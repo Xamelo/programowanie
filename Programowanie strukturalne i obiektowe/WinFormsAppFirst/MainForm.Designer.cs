@@ -45,6 +45,15 @@
             buttonRefreshTime = new Button();
             timerRefreshTime = new System.Windows.Forms.Timer(components);
             labelMouseClick = new Label();
+            numericUpDownFirstNumber = new NumericUpDown();
+            numericUpDownSecondNumber = new NumericUpDown();
+            buttonAdd = new Button();
+            buttonSub = new Button();
+            buttonMul = new Button();
+            buttonDiv = new Button();
+            labelResult = new Label();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownFirstNumber).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownSecondNumber).BeginInit();
             SuspendLayout();
             // 
             // buttonHello
@@ -197,19 +206,90 @@
             labelMouseClick.BackColor = SystemColors.Control;
             labelMouseClick.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             labelMouseClick.ForeColor = Color.FromArgb(192, 0, 0);
-            labelMouseClick.Location = new Point(560, 336);
+            labelMouseClick.Location = new Point(546, 251);
             labelMouseClick.Name = "labelMouseClick";
             labelMouseClick.Size = new Size(157, 32);
             labelMouseClick.TabIndex = 14;
             labelMouseClick.Text = "Not click yet";
             labelMouseClick.MouseClick += labelMouseClick_MouseClick;
             // 
+            // numericUpDownFirstNumber
+            // 
+            numericUpDownFirstNumber.Location = new Point(435, 346);
+            numericUpDownFirstNumber.Name = "numericUpDownFirstNumber";
+            numericUpDownFirstNumber.Size = new Size(120, 23);
+            numericUpDownFirstNumber.TabIndex = 15;
+            // 
+            // numericUpDownSecondNumber
+            // 
+            numericUpDownSecondNumber.Location = new Point(626, 346);
+            numericUpDownSecondNumber.Name = "numericUpDownSecondNumber";
+            numericUpDownSecondNumber.Size = new Size(120, 23);
+            numericUpDownSecondNumber.TabIndex = 16;
+            // 
+            // buttonAdd
+            // 
+            buttonAdd.Location = new Point(402, 388);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(86, 34);
+            buttonAdd.TabIndex = 17;
+            buttonAdd.Text = "+";
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += operation_Click;
+            // 
+            // buttonSub
+            // 
+            buttonSub.Location = new Point(494, 388);
+            buttonSub.Name = "buttonSub";
+            buttonSub.Size = new Size(86, 34);
+            buttonSub.TabIndex = 18;
+            buttonSub.Text = "-";
+            buttonSub.UseVisualStyleBackColor = true;
+            buttonSub.Click += operation_Click;
+            // 
+            // buttonMul
+            // 
+            buttonMul.Location = new Point(586, 388);
+            buttonMul.Name = "buttonMul";
+            buttonMul.Size = new Size(86, 34);
+            buttonMul.TabIndex = 19;
+            buttonMul.Text = "*";
+            buttonMul.UseVisualStyleBackColor = true;
+            buttonMul.Click += operation_Click;
+            // 
+            // buttonDiv
+            // 
+            buttonDiv.Location = new Point(678, 388);
+            buttonDiv.Name = "buttonDiv";
+            buttonDiv.Size = new Size(86, 34);
+            buttonDiv.TabIndex = 20;
+            buttonDiv.Text = "/";
+            buttonDiv.UseVisualStyleBackColor = true;
+            buttonDiv.Click += operation_Click;
+            // 
+            // labelResult
+            // 
+            labelResult.AutoSize = true;
+            labelResult.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            labelResult.Location = new Point(494, 443);
+            labelResult.Name = "labelResult";
+            labelResult.Size = new Size(81, 30);
+            labelResult.TabIndex = 21;
+            labelResult.Text = "Wynik: ";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(813, 463);
+            ClientSize = new Size(838, 495);
+            Controls.Add(labelResult);
+            Controls.Add(buttonDiv);
+            Controls.Add(buttonMul);
+            Controls.Add(buttonSub);
+            Controls.Add(buttonAdd);
+            Controls.Add(numericUpDownSecondNumber);
+            Controls.Add(numericUpDownFirstNumber);
             Controls.Add(labelMouseClick);
             Controls.Add(buttonRefreshTime);
             Controls.Add(labelCurrentTime);
@@ -227,6 +307,8 @@
             Controls.Add(buttonHello);
             Name = "MainForm";
             Text = "huj wie co";
+            ((System.ComponentModel.ISupportInitialize)numericUpDownFirstNumber).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownSecondNumber).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -249,5 +331,12 @@
         private Button buttonRefreshTime;
         private System.Windows.Forms.Timer timerRefreshTime;
         private Label labelMouseClick;
+        private NumericUpDown numericUpDownFirstNumber;
+        private NumericUpDown numericUpDownSecondNumber;
+        private Button buttonAdd;
+        private Button buttonSub;
+        private Button buttonMul;
+        private Button buttonDiv;
+        private Label labelResult;
     }
 }
