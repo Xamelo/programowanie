@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:DiceMauiApp"
+             x:Class="DiceMauiApp.MainPage">
+    <ContentPage.BindingContext>
+        <viewModel:DiceViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout BackgroundColor="#F5F5DC">
+        <Label Text="Gra w kości. Autor 00000"
+                TextColor="White"
+                BackgroundColor="#A52A2A"
+                FontSize="Medium"
+                Margin="0, 9, 0 ,9"/>
+
+        <Button Text="RZUĆ KOŚCMI"
+                Command="{Binding RollDiceCommand}"
+                Background="#D2691E"
+                HorizontalOptions="Center"
+                Margin="9"/>
+        <HorizontalStackLayout BackgroundColor="White">
+            <Image Source="{Binding Dice1}"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Margin="10"/>
+
+            <Image Source="{Binding Dice2}"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Center"
+                   Margin="10"/>
+
+            <Image Source="{Binding Dice3}"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Margin="10"/>
+
+            <Image Source="{Binding Dice4}"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Margin="10"/>
+
+            <Image Source="{Binding Dice5}"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   Margin="10"/>
+        </HorizontalStackLayout>
+        
+        <Label Text="{Binding RollResult}"
+               HorizontalOptions="Center"
+               Margin="0, 9, 0 ,9"/>
+
+        <Label Text="{Binding ResultOfTheGame}"
+               HorizontalOptions="Center"
+               Margin="0, 9, 0 ,9"/>
+
+        <Button Text="RESETUJ WYNIK"
+                Command="{Binding ResetGameCommand}"
+                Background="#D2691E"
+                HorizontalOptions="Center"
+                Margin="0, 9, 0 ,9"/>
+    </StackLayout>
+
+</ContentPage>

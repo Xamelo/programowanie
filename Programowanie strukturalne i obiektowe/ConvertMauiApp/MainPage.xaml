@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:ConvertMauiApp"
+             x:Class="ConvertMauiApp.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModel:ConverterViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Picker ItemsSource="{Binding Units}"
+                SelectedItem="{Binding SelectedUnit}"
+                HorizontalOptions="Center"/>
+
+        <Entry Text="{Binding UnitToChange}"
+               HorizontalOptions="Center"/>
+
+        <Button Text="Przelicz"
+                Command="{Binding ConvertCommand}"
+                HorizontalOptions="Center"/>
+
+        <Label Text="{Binding Message}"
+               HorizontalOptions="Center"/>
+    </StackLayout>
+    
+</ContentPage>
