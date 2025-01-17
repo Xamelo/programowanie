@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SkfVclopx6naw/lCxOyvHI1Zg+yJJu4h7jN5X5VaWsqDt0zvvSgVseMIukX4ZcX91PlZ4RUMLySLQhU3gsOf+A==",
+  "dgSpecHash": "gxjXeN9X224=",
   "success": true,
-  "projectFilePath": "C:\\3c\\programowanie\\Programowanie strukturalne i obiektowe\\SchoolAPP\\SchoolApp.csproj",
+  "projectFilePath": "C:\\kb4c\\programowanie\\programowanie\\Programowanie strukturalne i obiektowe\\SchoolAPP\\SchoolApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Uczeń\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Uczeń\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
