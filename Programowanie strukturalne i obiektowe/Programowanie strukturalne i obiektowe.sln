@@ -129,7 +129,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConverterNdMauiApp", "Conve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiceMauiApp", "DiceMauiApp\DiceMauiApp.csproj", "{28D3EBCB-A92A-4274-90F4-197DF5CD9C22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuizMauiApp", "QuizMauiApp\QuizMauiApp.csproj", "{05A27065-A1BE-4860-A0AC-3596EB11191B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QuizMauiApp", "QuizMauiApp\QuizMauiApp.csproj", "{05A27065-A1BE-4860-A0AC-3596EB11191B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

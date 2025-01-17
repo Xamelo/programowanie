@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShapeConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bee98d8cdc5875f1cdd4cf356e47890e9a9458af")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed78e11838bbc9b6158e2dc5f207e5f1b23dc172")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShapeConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShapeConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

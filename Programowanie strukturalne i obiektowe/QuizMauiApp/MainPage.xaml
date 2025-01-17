@@ -9,7 +9,7 @@
     </ContentPage.BindingContext>
 
     <StackLayout>
-        <Label Text="p"
+        <Label Text="{Binding Question}"
                FontSize="45"/>
 
         <RadioButton/>
@@ -19,19 +19,23 @@
 
         <HorizontalStackLayout>
             <Button Text="Poprzednie pytanie"
-                    WidthRequest="350"/>
+                    WidthRequest="350"
+                    Command="{Binding PreviousQuestionCommand}"/>
             
             <Button Text="Kolejne pytanie"
-                    WidthRequest="350"/>
+                    WidthRequest="350"
+                    Command="{Binding NextQuestionCommand}"/>
             
             <Button Text="Sprawdź"
-                    WidthRequest="350"/>
+                    WidthRequest="350"
+                    Command="{Binding CheckResultCommand}"/>
             
             <Button Text="Od nowa"
-                    WidthRequest="350"/>
+                    WidthRequest="350"
+                    Command="{Binding ResetGameCommand}"/>
         </HorizontalStackLayout>
         
-        <Label Text="w"
+        <Label Text="{Binding ResultOfTheGame}"
                FontSize="45"/>
     </StackLayout>
 

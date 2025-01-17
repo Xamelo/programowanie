@@ -10,14 +10,14 @@
         "projectUniqueName": "C:\\kb4c\\programowanie\\programowanie\\Programowanie strukturalne i obiektowe\\FirstConsoleApp\\FirstConsoleApp.csproj",
         "projectName": "FirstConsoleApp",
         "projectPath": "C:\\kb4c\\programowanie\\programowanie\\Programowanie strukturalne i obiektowe\\FirstConsoleApp\\FirstConsoleApp.csproj",
-        "packagesPath": "C:\\Users\\Uczeń\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Sala213\\.nuget\\packages\\",
         "outputPath": "C:\\kb4c\\programowanie\\programowanie\\Programowanie strukturalne i obiektowe\\FirstConsoleApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Uczeń\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sala213\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
