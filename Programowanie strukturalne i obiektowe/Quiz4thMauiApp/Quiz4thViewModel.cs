@@ -34,11 +34,11 @@ namespace Quiz4thMauiApp
             ResetCommand = new Command(Reset);
             Questions = new List<Question>
             {
-                new Question { QuestionText = "tak", Answers=["T", "T","t","T"],CorrectAnswer = 2 },
-                new Question { QuestionText = "tak",Answers=["t","T","T","T"], CorrectAnswer = 0 },
-                new Question { QuestionText = "tak",Answers=["T","T","t","T"], CorrectAnswer = 2 },
-                new Question { QuestionText = "Czy if to pętla?",Answers=["t","T","T","T"], CorrectAnswer = 0 },
-                new Question { QuestionText = "Tak?",Answers=["T","t","T","T"], CorrectAnswer = 1 },
+                new Question { QuestionText = "czy big c zdal prawo jazdy", Answers=["nie", "nie", "nie", "nie xd"],CorrectAnswer = 3 },
+                new Question { QuestionText = "co robi kacu na programowaniu",Answers=["nic","spi","oglada tiktoka","udaje ze cos umie"], CorrectAnswer = 2 },
+                new Question { QuestionText = "ile skuty ma majatku",Answers=["malo","za duzo","tfu tfu tfu","5 zl"], CorrectAnswer = 1 },
+                new Question { QuestionText = "ile lat ma pani ewa k",Answers=["18","69","w sam raz","wiecej niz 10000 ale mniej niz 10000000000"], CorrectAnswer = 0 },
+                new Question { QuestionText = "co lubi kuba",Answers=["nic","nic","nic","tik toka"], CorrectAnswer = 3 },
             };
         }
         public void PreviousQuestion()
@@ -88,10 +88,10 @@ namespace Quiz4thMauiApp
                     score++;
                 }
             }
-            ResultLabelText = $"Brawo, odpowiedziałeś poprawnie na {score}/{Questions.Count()} pytań!";
+            ResultLabelText = $"Wynik: {score}/{Questions.Count()}";
 
         }
-        #region Obsluga radio boxow
+        #region radio buttons
         private bool checked0;
         private bool checked1;
         private bool checked2;

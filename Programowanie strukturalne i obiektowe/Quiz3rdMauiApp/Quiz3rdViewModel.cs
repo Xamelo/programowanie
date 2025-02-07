@@ -74,6 +74,8 @@ namespace Quiz3rdMauiApp
             NextQuestionCommand = new Command(NextQuestion);
             QuestionText = "";
             GameScoreText = "";
+            Random rand = new Random();
+            allQuestions = allQuestions.OrderBy(q => rand.Next()).ToList();
         }
 
         private void NextQuestion()

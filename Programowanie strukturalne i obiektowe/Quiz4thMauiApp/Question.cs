@@ -15,11 +15,7 @@ namespace Quiz4thMauiApp
         public int CurrentAnswer
         {
             get { return currentAnswer; }
-            set
-            {
-                currentAnswer = value;
-                OnPropertyChanged();
-            }
+            set { currentAnswer = value; OnPropertyChanged(); }
         }
     }
 }
