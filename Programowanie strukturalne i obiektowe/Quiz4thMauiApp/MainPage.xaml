@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Quiz4thMauiApp"
+             x:Class="Quiz4thMauiApp.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:Quiz4thViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        <StackLayout>
+                <StackLayout Orientation="Vertical">
+
+                    <Label Text="{Binding CurrentQuestion.QuestionText}"></Label>
+                    <RadioButton GroupName="Answers" Content="{Binding CurrentQuestion.Answers[0]}" IsChecked="{Binding Checked0}"/>
+                    <RadioButton GroupName="Answers" Content="{Binding CurrentQuestion.Answers[1]}" IsChecked="{Binding Checked1}"/>
+                    <RadioButton GroupName="Answers" Content="{Binding CurrentQuestion.Answers[2]}" IsChecked="{Binding Checked2}"/>
+                    <RadioButton GroupName="Answers" Content="{Binding CurrentQuestion.Answers[3]}" IsChecked="{Binding Checked3}"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Poprzednie" Command="{Binding PreviousQuestionCommand}" WidthRequest="110"/>
+                        <Button Text="Następne" Command="{Binding NextQuestionCommand}" WidthRequest="100"/>
+                        <Button Text="Sprawdź" Command="{Binding CheckAnswersCommand}" WidthRequest="90"/>
+                        <Button Text="Reset" Command="{Binding ResetCommand}" WidthRequest="70"/>
+                    </StackLayout>
+                </StackLayout>
+        </StackLayout>
+        <Label Text="{Binding ResultLabelText}"/>
+    </StackLayout>
+</ContentPage>

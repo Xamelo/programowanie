@@ -62,16 +62,29 @@ namespace QuizMauiApp
         }
         #endregion
 
+        private string[] answers;
+
+        public string[] Answers
+        {
+            get
+            {
+                
+                return answers;
+            }
+            set { answers = value; }
+        }
+
+
         const int AMOUNTofAnswers = 4;
         const int AMOUNTofQuestions = 4;
         int currentQuestion = 0;
         int score = 0;
-        string[,] answers = new string[AMOUNTofAnswers, AMOUNTofQuestions] {
-            {"a", "b", "poprawna", "d" },
-            {"a", "poprawna", "c", "d" },
-            {"poprawna", "b", "c", "d" },
-            {"a", "b", "poprawna", "d" }
-        };
+        //string[,] answers = new string[AMOUNTofAnswers, AMOUNTofQuestions] {
+        //    {"a", "b", "poprawna", "d" },
+        //    {"a", "poprawna", "c", "d" },
+        //    {"poprawna", "b", "c", "d" },
+        //    {"a", "b", "poprawna", "d" }
+        //};
 
         public QuizViewModel()
         {
@@ -121,6 +134,7 @@ namespace QuizMauiApp
         private void ResetGame()
         {
             currentQuestion = 0;
+            Question = Questions.First();
             score = 0;
             ResultOfTheGame = "Wynik: ";
         }
