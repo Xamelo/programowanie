@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Quiz3rdMauiApp"
+             x:Class="Quiz3rdMauiApp.MainPage">
+
+    <ContentPage.BindingContext>
+        <local:Quiz3rdViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <Label Text="{Binding QuestionText}"/>
+        <StackLayout BindableLayout.ItemsSource="{Binding Answers}">
+            <BindableLayout.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout>
+                        <RadioButton Content="{Binding}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </BindableLayout.ItemTemplate>
+        </StackLayout>
+        <HorizontalStackLayout>
+            <!--<Button Text="Poprzednie pytanie"
+            WidthRequest="350"
+            Command="{Binding PreviousQuestionCommand}"/>-->
+
+            <Button Text="Kolejne pytanie"
+            WidthRequest="350"
+            Command="{Binding NextQuestionCommand}"/>
+
+            <!--<Button Text="Sprawdź"
+            WidthRequest="350"
+            Command="{Binding CheckResultCommand}"/>-->
+
+            <!--<Button Text="Od nowa"
+            WidthRequest="350"
+            Command="{Binding ResetGameCommand}"/>-->
+        </HorizontalStackLayout>
+
+        <!--<Label Text="{Binding GameScore}"
+                FontSize="45"/>-->
+    </StackLayout>
+
+</ContentPage>
