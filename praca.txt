@@ -1,0 +1,74 @@
+<HorizontalStackLayout>
+    <Label Text="Quiz"/>
+</HorizontalStackLayout>
+<HorizontalStackLayout>
+    <Label Text="{Binding QuestionText}"/>
+</HorizontalStackLayout>
+<StackLayout>
+    <RadioButton
+        GroupName="answers"/>
+    <Label Text="{Binding}"/>
+    <RadioButton
+        GroupName="answers"/>
+    <Label Text="{Binding}"/>
+    <RadioButton
+        GroupName="answers"/>
+    <Label Text="{Binding}"/>
+    <RadioButton
+        GroupName="answers"/>
+    <Label Text="{Binding}"/>
+</StackLayout>
+<HorizontalStackLayout>
+    <Button Text="RESET"
+            Command="{Binding}"/>
+    <Button Text="PREVIOUS"
+            Command="{Binding}"/>
+    <Button Text="NEXT"
+            Command="{Binding}"/>
+    <Button Text="END"
+            Command="{Binding}"/>
+</HorizontalStackLayout>
+<HorizontalStackLayout>
+    <Label Text="{Binding ResultText}"/>
+</HorizontalStackLayout>
+
+private QuizDBContext dbContext;
+
+public QuizRepository()
+{
+    dbContext = new QuizDBContext();
+}
+
+public Question GetQuestion(int id)
+{
+    /*
+     SELECT *
+    FROM questions 
+    WHERE questions.id = idNet
+    LIMIT 1
+     */
+    return dbContext.Questions.Where(q => q.Id == id).FirstOrDefault();
+}
+
+internal class QuizDatabaseViewModel : BindableObject
+{
+    int idQuestion = 1;
+    Question question;
+
+    private string questionText;
+    public string QuestionText
+    {
+        get { return questionText; }
+        set { questionText = value; OnPropertyChanged(); }
+    }
+
+    private QuizRepository quizRepository;
+    public QuizDatabaseViewModel()
+    {
+        quizRepository = new QuizRepository();
+        question = quizRepository.GetQuestion(idQuestion);
+        if (question != null)
+            QuestionText = question.Text;
+        else
+            QuestionText = "Pytanie";
+    }
