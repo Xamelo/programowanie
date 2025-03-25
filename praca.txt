@@ -1,74 +1,450 @@
-<HorizontalStackLayout>
-    <Label Text="Quiz"/>
-</HorizontalStackLayout>
-<HorizontalStackLayout>
-    <Label Text="{Binding QuestionText}"/>
-</HorizontalStackLayout>
-<StackLayout>
-    <RadioButton
-        GroupName="answers"/>
-    <Label Text="{Binding}"/>
-    <RadioButton
-        GroupName="answers"/>
-    <Label Text="{Binding}"/>
-    <RadioButton
-        GroupName="answers"/>
-    <Label Text="{Binding}"/>
-    <RadioButton
-        GroupName="answers"/>
-    <Label Text="{Binding}"/>
-</StackLayout>
-<HorizontalStackLayout>
-    <Button Text="RESET"
-            Command="{Binding}"/>
-    <Button Text="PREVIOUS"
-            Command="{Binding}"/>
-    <Button Text="NEXT"
-            Command="{Binding}"/>
-    <Button Text="END"
-            Command="{Binding}"/>
-</HorizontalStackLayout>
-<HorizontalStackLayout>
-    <Label Text="{Binding ResultText}"/>
-</HorizontalStackLayout>
+using Microsoft.EntityFrameworkCore;
+using QuizDatabaseClassLibrary.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-private QuizDBContext dbContext;
-
-public QuizRepository()
+namespace QuizDatabaseClassLibrary
 {
-    dbContext = new QuizDBContext();
-}
-
-public Question GetQuestion(int id)
-{
-    /*
-     SELECT *
-    FROM questions 
-    WHERE questions.id = idNet
-    LIMIT 1
-     */
-    return dbContext.Questions.Where(q => q.Id == id).FirstOrDefault();
-}
-
-internal class QuizDatabaseViewModel : BindableObject
-{
-    int idQuestion = 1;
-    Question question;
-
-    private string questionText;
-    public string QuestionText
+    public class QuizRepository
     {
-        get { return questionText; }
-        set { questionText = value; OnPropertyChanged(); }
+        private QuizDBContext dbContext;
+
+        public QuizRepository()
+        {
+            dbContext = new QuizDBContext();
+        }
+
+        public Question GetQuestion(int id)
+        {
+            /*
+             SELECT *
+            FROM questions 
+            WHERE questions.id = idNet
+            LIMIT 1
+             */
+            return dbContext.Questions.Where(q => q.Id == id).FirstOrDefault();
+        }
+
+        public List<Answer> GetAnswers(int id)
+        {
+            /*
+             SELECT *
+            FROM answers
+            WHERE question_id = idNet
+             */
+            return dbContext.Answers.Where(a => a.QuestionId == id).ToList();
+        }
+
+        public int GetNumberOfQuestions()
+        {
+            /*
+             SELECT COUNT(id) 
+            FROM questions
+             */
+            return dbContext.Questions.Select(q=>q.Id).Count();
+        }
     }
+}
 
-    private QuizRepository quizRepository;
-    public QuizDatabaseViewModel()
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModel="clr-namespace:QuizDatabaseMauiApp"
+             x:Class="QuizDatabaseMauiApp.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewModel:QuizDatabaseViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout>
+        <HorizontalStackLayout>
+            <Label Text="Quiz"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="{Binding QuestionText}"/>
+        </HorizontalStackLayout>
+        <StackLayout>
+            <HorizontalStackLayout>
+                <RadioButton GroupName="answers"
+                         IsChecked="{Binding Checked1}"/>
+            <Label Text="{Binding FirstAnswer}"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <RadioButton GroupName="answers"
+                         IsChecked="{Binding Checked2}"/>
+                <Label Text="{Binding SecondAnswer}"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <RadioButton GroupName="answers"
+                         IsChecked="{Binding Checked3}"/>
+                <Label Text="{Binding ThirdAnswer}"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <RadioButton GroupName="answers"
+                         IsChecked="{Binding Checked4}"/>
+                <Label Text="{Binding FourthAnswer}"/>
+            </HorizontalStackLayout>
+        </StackLayout>
+        <HorizontalStackLayout>
+            <Button Text="RESET"
+                    Command="{Binding ResetQuizCommand}"/>
+            <Button Text="PREVIOUS"
+                    Command="{Binding PreviousQuestionCommand}"/>
+            <Button Text="NEXT"
+                    Command="{Binding NextQuestionCommand}"/>
+            <Button Text="END"
+                    Command="{Binding ShowResultCommand}"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label Text="{Binding ResultOfQuizText}"/>
+        </HorizontalStackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>
+
+
+using QuizDatabaseClassLibrary;
+using QuizDatabaseClassLibrary.Models;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace QuizDatabaseMauiApp
+{
+    internal class QuizDatabaseViewModel : BindableObject
     {
-        quizRepository = new QuizRepository();
-        question = quizRepository.GetQuestion(idQuestion);
-        if (question != null)
+        private QuizRepository quizRepository;
+        int idQuestion = 1;
+        int resultOfQuiz = 0;
+        Question question;
+        List<Answer> questionAnswers;
+
+        #region answers
+        private string firstAnswer;
+
+        public string FirstAnswer
+        {
+            get { return firstAnswer; }
+            set { firstAnswer = value; OnPropertyChanged(); }
+        }
+
+        private string secondAnswer;
+
+        public string SecondAnswer
+        {
+            get { return secondAnswer; }
+            set { secondAnswer = value; OnPropertyChanged(); }
+        }
+
+        private string thirdAnswer;
+
+        public string ThirdAnswer
+        {
+            get { return thirdAnswer; }
+            set { thirdAnswer = value; OnPropertyChanged(); }
+        }
+
+        private string fourthAnswer;
+
+        public string FourthAnswer
+        {
+            get { return fourthAnswer; }
+            set { fourthAnswer = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        private string resultOfQuizText;
+
+        public string ResultOfQuizText
+        {
+            get { return resultOfQuizText; }
+            set { resultOfQuizText = value; OnPropertyChanged(); }
+        }
+
+
+        private string questionText;
+        public string QuestionText
+        {
+            get { return questionText; }
+            set { questionText = value; OnPropertyChanged(); }
+        }
+        
+        public QuizDatabaseViewModel()
+        {
+            quizRepository = new QuizRepository();
+            question = quizRepository.GetQuestion(idQuestion);
+            questionAnswers = quizRepository.GetAnswers(idQuestion);
+            ResultOfQuizText = "";
+            if (question != null)
+            {
+                QuestionText = question.Text;
+                ShowAnswers();
+                ResetRadioButtons();
+            }
+            else
+                QuestionText = "Pytanie";
+        }
+
+        private Command nextQuestionCommand;
+
+        public Command NextQuestionCommand
+        {
+            get 
+            {
+                if (nextQuestionCommand == null)
+                    nextQuestionCommand = new Command(() =>
+                    {
+                        CheckCorrectness();
+
+                        if (idQuestion < quizRepository.GetNumberOfQuestions() - 1)
+                        {                            
+                            idQuestion++;
+                            ShowQuestion();
+                            ShowAnswers();                            
+                            ResetRadioButtons();
+                        }
+                        else
+                        {
+                            EndGame();
+                            ResetRadioButtons();
+                            if (idQuestion < quizRepository.GetNumberOfQuestions() + 1)
+                                idQuestion++;
+                        }
+                            
+                    });
+                return nextQuestionCommand;
+            }
+            set { nextQuestionCommand = value; }
+        }
+
+        private Command previousQuestionCommand;
+
+        public Command PreviousQuestionCommand
+        {
+            get
+            {
+                if (previousQuestionCommand == null)
+                    previousQuestionCommand = new Command(() =>
+                    {
+                        if (idQuestion > 1)
+                        {
+                            idQuestion--;
+                            ShowQuestion();
+                            ShowAnswers();
+                        }
+                    });
+                return previousQuestionCommand;
+            }
+            set { previousQuestionCommand = value; }
+        }
+
+        private Command resetQuizCommand;
+
+        public Command ResetQuizCommand
+        {
+            get
+            {
+                if (resetQuizCommand == null)
+                    resetQuizCommand = new Command(() =>
+                    {
+                        idQuestion = 1;
+                        ShowQuestion();
+                        ShowAnswers();
+                        resultOfQuiz = 0;
+                    });
+                return resetQuizCommand; 
+            }
+            set { resetQuizCommand = value; }
+        }
+
+        private Command showResultCommand;
+
+        public Command ShowResultCommand
+        {
+            get 
+            {
+                if (showResultCommand == null)
+                    showResultCommand = new Command(() =>
+                    {
+                        ResultOfQuizText = resultOfQuiz.ToString();
+                    });
+                return showResultCommand;
+            }
+            set { showResultCommand = value; }
+        }
+
+
+        private void ShowQuestion()
+        {
+            question = quizRepository.GetQuestion(idQuestion);
             QuestionText = question.Text;
-        else
-            QuestionText = "Pytanie";
+        }
+
+        private void ShowAnswers()
+        {
+            if (questionAnswers != null)
+            {
+                questionAnswers = quizRepository.GetAnswers(idQuestion);
+                FirstAnswer = questionAnswers.First().Text;
+                SecondAnswer = questionAnswers[1].Text;
+                ThirdAnswer = questionAnswers[2].Text;
+                FourthAnswer = questionAnswers[3].Text;
+            }
+        }
+
+        private void EndGame()
+        {
+            QuestionText = "Koniec Quizu";
+            FirstAnswer = "";
+            SecondAnswer = "";
+            ThirdAnswer = "";
+            FourthAnswer = "";
+        }
+
+        private void ResetRadioButtons()
+        {
+            Checked1 = false;
+            Checked2 = false;
+            Checked3 = false;
+            Checked4 = false;
+        }
+
+        private void CheckCorrectness()
+        {
+            if (Checked1 == true && questionAnswers.First().IsCorrect == true)
+            {
+                resultOfQuiz++;
+            }
+            else if (Checked2 == true && questionAnswers[1].IsCorrect == true)
+            {
+                resultOfQuiz++;
+            }
+            else if (Checked3 == true && questionAnswers[2].IsCorrect == true)
+            {
+                resultOfQuiz++;
+            }
+            else if (Checked4 == true && questionAnswers[3].IsCorrect == true)
+            {
+                resultOfQuiz++;
+            }
+        }
+
+        #region checked props
+        private bool checked1;
+        private bool checked2;
+        private bool checked3;
+        private bool checked4;
+
+        public bool Checked1
+        {
+            get { return checked1; }
+            set { checked1 = value; OnPropertyChanged(); }
+        }
+        public bool Checked2
+        {
+            get { return checked2; }
+            set { checked2 = value; OnPropertyChanged(); }
+        }
+        public bool Checked3
+        {
+            get { return checked3; }
+            set { checked3 = value; OnPropertyChanged(); }
+        }
+        public bool Checked4
+        {
+            get { return checked4; }
+            set { checked4 = value; OnPropertyChanged(); }
+        }
+        #endregion
     }
+}
+
+using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Pomelo.EntityFrameworkCore.MySql.Scaffolding.Internal;
+using QuizDatabaseClassLibrary.Models;
+
+namespace QuizDatabaseClassLibrary;
+
+public partial class QuizDBContext : DbContext
+{
+    public QuizDBContext()
+    {
+    }
+
+    public QuizDBContext(DbContextOptions<QuizDBContext> options)
+        : base(options)
+    {
+    }
+
+    public virtual DbSet<Answer> Answers { get; set; }
+
+    public virtual DbSet<Question> Questions { get; set; }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseMySql("server=localhost;database=bazaquiz;user=root", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.4.32-mariadb"));
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder
+            .UseCollation("utf8mb4_general_ci")
+            .HasCharSet("utf8mb4");
+
+        modelBuilder.Entity<Answer>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("answers");
+
+            entity.HasIndex(e => e.QuestionId, "question_id");
+
+            entity.Property(e => e.Id)
+                .HasColumnType("int(11)")
+                .HasColumnName("id");
+            entity.Property(e => e.IsCorrect).HasColumnName("isCorrect");
+            entity.Property(e => e.QuestionId)
+                .HasColumnType("int(11)")
+                .HasColumnName("question_id");
+            entity.Property(e => e.Text)
+                .HasMaxLength(50)
+                .HasColumnName("text");
+
+            entity.HasOne(d => d.Question).WithMany(p => p.Answers)
+                .HasForeignKey(d => d.QuestionId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("answers_ibfk_1");
+        });
+
+        modelBuilder.Entity<Question>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PRIMARY");
+
+            entity.ToTable("questions");
+
+            entity.Property(e => e.Id)
+                .HasColumnType("int(11)")
+                .HasColumnName("id");
+            entity.Property(e => e.Text)
+                .HasMaxLength(50)
+                .HasColumnName("text");
+        });
+
+        OnModelCreatingPartial(modelBuilder);
+    }
+
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+}
