@@ -1,0 +1,30 @@
+int[] nominal = { 500, 200, 100, 50, 20, 10, 5, 2, 1 };
+        Console.Write("Podaj kwotę do wydania (reszta): ");
+        if (!int.TryParse(Console.ReadLine(), out int reszta) || reszta < 0)
+        {
+            Console.WriteLine("Nieprawidłowa wartość.");
+            return;
+        }
+
+        string w = "Wyplacono ";
+
+        for (int i = 0; i < nominal.Length && reszta > 0; i++)
+        {
+            if (reszta >= nominal[i])
+            {
+                int liczba = reszta / nominal[i];
+                reszta = reszta - nominal[i] * liczba;
+
+                if (liczba > 0)
+                {
+                    w += $"{liczba} x {nominal[i]} PLN, ";
+                }
+            }
+        }
+
+        if (w.EndsWith(", "))
+        {
+            w = w.Substring(0, w.Length - 2);
+        }
+
+        Console.WriteLine(w);
