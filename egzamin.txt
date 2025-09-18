@@ -1,0 +1,104 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace czerwiec2025aplikacja
+{
+    internal class MainPageViewModel : BindableObject
+    {
+        private int colorRvalue;
+        public int ColorRvalue
+        {
+            get { return colorRvalue; }
+            set { colorRvalue = value; OnPropertyChanged(); }
+        }
+
+        private int colorGvalue;
+
+        public int ColorGvalue
+        {
+            get { return colorGvalue; }
+            set { colorGvalue = value; OnPropertyChanged(); }
+        }
+
+        private int colorBvalue;
+
+        public int ColorBvalue
+        {
+            get { return colorBvalue; }
+            set { colorBvalue = value; OnPropertyChanged(); }
+        }
+
+
+
+        public MainPageViewModel()
+        {
+            ColorRvalue = 255;
+            ColorGvalue = 255;
+            colorBvalue = 255;
+        }
+    }
+}
+
+
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="czerwiec2025aplikacja.MainPage"
+             xmlns:viewModel="clr-namespace:czerwiec2025aplikacja">
+    <ContentPage.BindingContext>
+        <viewModel:MainPageViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout BackgroundColor="Cornsilk">
+        <BoxView BackgroundColor="White"/>
+        <Label Text="Dobierz kolor suwakami i zapisz przyciskiem"/>
+        <Grid RowDefinitions="*, *, *"
+              ColumnDefinitions="Auto, *, Auto"
+              ColumnSpacing="20"
+              Padding="80">
+            
+            <Label Grid.Row="0"
+                   Grid.Column="0"
+                   Text="R"/>
+            <Slider Grid.Row="0"
+                    Grid.Column="1"
+                    Minimum="0"
+                    Maximum="255"
+                    Value="{Binding ColorRvalue}"/>
+            <Label Grid.Row="0"
+                   Grid.Column="2"
+                   Text="{Binding ColorRvalue}"/>
+
+            <Label Grid.Row="1"
+                   Grid.Column="0"
+                   Text="G"/>
+            <Slider Grid.Row="1"
+                    Grid.Column="1"
+                    Minimum="0"
+                    Maximum="255"
+                    Value="{Binding ColorGvalue}"/>
+            <Label Grid.Row="1"
+                   Grid.Column="2"
+                   Text="{Binding ColorGvalue}"/>
+
+            <Label Grid.Row="2"
+                   Grid.Column="0"
+                   Text="B"/>
+            <Slider Grid.Row="2"
+                    Grid.Column="1"
+                    Minimum="0"
+                    Maximum="255"
+                    Value="{Binding ColorBvalue}"/>
+            <Label Grid.Row="2"
+                   Grid.Column="2"
+                   Text="{Binding ColorBvalue}"/>
+        </Grid>
+        <Button Text="Pobierz"
+                HorizontalOptions="Center"/>
+        
+    </StackLayout>
+
+</ContentPage>
