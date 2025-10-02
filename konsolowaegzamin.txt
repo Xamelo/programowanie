@@ -1,0 +1,76 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Ile wygenerować losowań?");
+        int liczbaZestawow = int.Parse(Console.ReadLine());
+
+        int[,] wyniki = GenerujLosowania(liczbaZestawow);
+        WyswietlWyniki(wyniki);
+        ZliczIWyswietlWystapienia(wyniki);
+    }
+
+    // Funkcja generująca losowania
+    static int[,] GenerujLosowania(int n)
+    {
+        Random rnd = new Random();
+        int[,] tablica = new int[n, 6];
+
+        for (int i = 0; i < n; i++)
+        {
+            HashSet<int> zestaw = new HashSet<int>();
+            while (zestaw.Count < 6)
+            {
+                int liczba = rnd.Next(1, 50); // losuje liczby od 1 do 49
+                zestaw.Add(liczba);
+            }
+
+            int j = 0;
+            foreach (int liczba in zestaw)
+            {
+                tablica[i, j] = liczba;
+                j++;
+            }
+        }
+        return tablica;
+    }
+
+    // Funkcja wyświetlająca wyniki losowań
+    static void WyswietlWyniki(int[,] tablica)
+    {
+        Console.WriteLine("\nZestawy wylosowanych liczb:");
+        for (int i = 0; i < tablica.GetLength(0); i++)
+        {
+            Console.Write("Losowanie " + (i + 1) + ": ");
+            for (int j = 0; j < tablica.GetLength(1); j++)
+            {
+                Console.Write(tablica[i, j] + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    // Funkcja zliczająca i wyświetlająca ile razy pojawiła się każda liczba
+    static void ZliczIWyswietlWystapienia(int[,] tablica)
+    {
+        int[] wystapienia = new int[50]; // indeks 1–49
+
+        for (int i = 0; i < tablica.GetLength(0); i++)
+        {
+            for (int j = 0; j < tablica.GetLength(1); j++)
+            {
+                int liczba = tablica[i, j];
+                wystapienia[liczba]++;
+            }
+        }
+
+        Console.WriteLine("\nWystąpienia liczb 1–49:");
+        for (int i = 1; i <= 49; i++)
+        {
+            Console.WriteLine($"Liczba {i} : {wystapienia[i]}");
+        }
+    }
+}
