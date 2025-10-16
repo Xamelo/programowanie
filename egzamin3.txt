@@ -1,0 +1,139 @@
+<ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="20">
+
+            <!-- Duży prostokąt -->
+            <Frame BackgroundColor="{Binding CurrentColor}" HeightRequest="100" />
+
+            <Label Text="Dobierz kolor suwakami i zapisz przyciskiem:" 
+                   FontSize="16" />
+
+            <!-- Suwaki RGB -->
+            <Grid ColumnDefinitions="auto,*,auto" RowSpacing="10">
+
+                <!-- R -->
+                <Label Grid.Row="0" Grid.Column="0" Text="R:" VerticalOptions="Center" />
+                <Slider Grid.Row="0" Grid.Column="1"
+                        Minimum="0" Maximum="255"
+                        Value="{Binding R, Mode=TwoWay}" />
+                <Label Grid.Row="0" Grid.Column="2"
+                       Text="{Binding R}" VerticalOptions="Center" />
+
+                <!-- G -->
+                <Label Grid.Row="1" Grid.Column="0" Text="G:" VerticalOptions="Center" />
+                <Slider Grid.Row="1" Grid.Column="1"
+                        Minimum="0" Maximum="255"
+                        Value="{Binding G, Mode=TwoWay}" />
+                <Label Grid.Row="1" Grid.Column="2"
+                       Text="{Binding G}" VerticalOptions="Center" />
+
+                <!-- B -->
+                <Label Grid.Row="2" Grid.Column="0" Text="B:" VerticalOptions="Center" />
+                <Slider Grid.Row="2" Grid.Column="1"
+                        Minimum="0" Maximum="255"
+                        Value="{Binding B, Mode=TwoWay}" />
+                <Label Grid.Row="2" Grid.Column="2"
+                       Text="{Binding B}" VerticalOptions="Center" />
+            </Grid>
+
+            <!-- Przycisk i prostokąt z zapisanym kolorem -->
+            <Button Text="Pobierz" 
+                    BackgroundColor="#CD853F"
+                    TextColor="White"
+                    Command="{Binding SaveColorCommand}" />
+
+            <Frame BackgroundColor="{Binding SavedColor}" HeightRequest="50" />
+
+            <Label Text="{Binding SavedColorText}"
+                   HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
+
+{
+        private int r = 255;
+        private int g = 255;
+        private int b = 255;
+
+        private Color savedColor = Colors.White;
+
+        public int R
+        {
+            get => r;
+            set
+            {
+                if (r != value)
+                {
+                    r = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(CurrentColor));
+                }
+            }
+        }
+
+        public int G
+        {
+            get => g;
+            set
+            {
+                if (g != value)
+                {
+                    g = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(CurrentColor));
+                }
+            }
+        }
+
+        public int B
+        {
+            get => b;
+            set
+            {
+                if (b != value)
+                {
+                    b = value;
+                    OnPropertyChanged();
+                    OnPropertyChanged(nameof(CurrentColor));
+                }
+            }
+        }
+
+        public Color CurrentColor => Color.FromRgb(R, G, B);
+
+        public Color SavedColor
+        {
+            get => savedColor;
+            set
+            {
+                if (savedColor != value)
+                {
+                    savedColor = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public string SavedColorText => $"{SavedColor.Red * 255:F0}, {SavedColor.Green * 255:F0}, {SavedColor.Blue * 255:F0}";
+
+        public ICommand SaveColorCommand { get; }
+
+        public MainViewModel()
+        {
+            SaveColorCommand = new Command(SaveColor);
+        }
+
+        private void SaveColor()
+        {
+            SavedColor = CurrentColor;
+            OnPropertyChanged(nameof(SavedColorText));
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged([CallerMemberName] string name = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+    }
+}
