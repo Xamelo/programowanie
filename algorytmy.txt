@@ -1,0 +1,85 @@
+using ConsoleApp1;
+
+ArrayToOperations array = new ArrayToOperations(20);
+
+array.ShowArray();
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    internal class ArrayToOperations
+    {
+        private const int SIZE_OF_ARRAY = 21;
+        private int[] array = new int[SIZE_OF_ARRAY];
+
+        private void FillArray()
+        {
+            Random random = new Random();
+            for (int i = 0; i < SIZE_OF_ARRAY; i++) 
+            {
+                array[i] = random.Next(10, 25);
+            }
+        }
+
+        public void ShowArray()
+        {
+            for (int i = 0; i < SIZE_OF_ARRAY; i++)
+            {
+                Console.WriteLine($"{i}: {array[i]}");
+            }
+        }
+
+        public int GetFirstOf(int value)
+        {
+            for (int i = 0; i < SIZE_OF_ARRAY; i++)
+            {
+                if (array[i] == value)
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        public int GetAmountOfNotEvenNumbers()
+        {
+            int counter = 0;
+            for (int i = 0; i < SIZE_OF_ARRAY; i++)
+            {
+                if (!(array[i] % 2 == 0))
+                {
+                    Console.WriteLine(array[i]);
+                    counter++;
+                }
+            }
+            return counter;
+        }
+
+        public double GetAverageValue()
+        {
+            double meter = 0;
+            for (int i = 0; i < SIZE_OF_ARRAY; i++)
+            {
+                meter += array[i];
+            }
+            return meter / SIZE_OF_ARRAY;
+        }
+
+        public ArrayToOperations(int value)
+        {
+            FillArray();
+            Console.WriteLine("elementy tablicy");
+            ShowArray();
+            Console.WriteLine("indeks wartosci szukanej " + GetFirstOf(value));
+            Console.WriteLine("nieparzyste " + GetAmountOfNotEvenNumbers());
+            Console.WriteLine("srednia" + GetAverageValue());
+        }
+    }
+}
