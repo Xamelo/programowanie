@@ -83,3 +83,130 @@ namespace ConsoleApp1
         }
     }
 }
+
+
+
+
+
+        ┌──────────────┐
+        │    START     │
+        └──────┬───────┘
+               │
+               ▼
+ ┌────────────────────────┐
+ │ Utwórz ArrayToOperations│
+ │ z parametrem 20         │
+ └───────────┬────────────┘
+             │
+             ▼
+ ┌────────────────────────┐
+ │ Wywołaj ShowArray()    │
+ └───────────┬────────────┘
+             │
+             ▼
+ ┌────────────────────────┐
+ │   FillArray()          │
+ │ (losowanie wartości)   │
+ └───────────┬────────────┘
+             │
+             ▼
+ ┌────────────────────────┐
+ │   ShowArray()          │
+ │ (wypisanie tablicy)    │
+ └───────────┬────────────┘
+             │
+             ▼
+ ┌────────────────────────┐
+ │   GetFirstOf(value)    │
+ │ (szukanie wartości)    │
+ └───────────┬────────────┘
+             │
+             ▼
+ ┌────────────────────────┐
+ │ GetAmountOfNotEvenNumbers│
+ │ (liczenie nieparzystych) │
+ └───────────┬────────────┘
+             │
+             ▼
+ ┌────────────────────────┐
+ │ GetAverageValue()      │
+ │ (obliczanie średniej)  │
+ └───────────┬────────────┘
+             │
+             ▼
+        ┌──────────────┐
+        │     STOP     │
+        └──────────────┘
+
+
+
+
+
+
+
+
+
+
+
+
+
+PROGRAM główny
+    UTWÓRZ obiekt array typu ArrayToOperations z parametrem 20
+    WYWOŁAJ array.ShowArray()
+KONIEC PROGRAMU
+
+
+KLASA ArrayToOperations
+    STAŁA SIZE_OF_ARRAY = 21
+    ZMIENNA array[SIZE_OF_ARRAY] — tablica liczb całkowitych
+
+    METODA FillArray()
+        UTWÓRZ generator losowy
+        DLA i od 0 do SIZE_OF_ARRAY - 1
+            array[i] = losowa liczba z zakresu 10 do 24
+        KONIEC DLA
+    KONIEC METODY
+
+    METODA ShowArray()
+        DLA i od 0 do SIZE_OF_ARRAY - 1
+            WYPISZ i, array[i]
+        KONIEC DLA
+    KONIEC METODY
+
+    METODA GetFirstOf(value)
+        DLA i od 0 do SIZE_OF_ARRAY - 1
+            JEŚLI array[i] == value
+                ZWRÓĆ i
+            KONIEC JEŚLI
+        KONIEC DLA
+        ZWRÓĆ -1   // jeśli nie znaleziono
+    KONIEC METODY
+
+    METODA GetAmountOfNotEvenNumbers()
+        counter = 0
+        DLA i od 0 do SIZE_OF_ARRAY - 1
+            JEŚLI array[i] nie jest parzyste
+                WYPISZ array[i]
+                counter = counter + 1
+            KONIEC JEŚLI
+        KONIEC DLA
+        ZWRÓĆ counter
+    KONIEC METODY
+
+    METODA GetAverageValue()
+        suma = 0
+        DLA i od 0 do SIZE_OF_ARRAY - 1
+            suma = suma + array[i]
+        KONIEC DLA
+        ZWRÓĆ suma / SIZE_OF_ARRAY
+    KONIEC METODY
+
+    KONSTRUKTOR ArrayToOperations(value)
+        WYWOŁAJ FillArray()
+        WYPISZ "elementy tablicy"
+        WYWOŁAJ ShowArray()
+        WYPISZ "indeks wartości szukanej: " + GetFirstOf(value)
+        WYPISZ "nieparzyste: " + GetAmountOfNotEvenNumbers()
+        WYPISZ "średnia: " + GetAverageValue()
+    KONIEC KONSTRUKTORA
+KONIEC KLASY
